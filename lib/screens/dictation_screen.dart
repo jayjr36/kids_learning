@@ -12,12 +12,13 @@ class SpellWordScreenState extends State<SpellWordScreen> {
   final FlutterTts _flutterTts = FlutterTts();
   final TextEditingController _controller = TextEditingController();
   final List<Map<String, String>> _words = [
-    {'word': 'apple', 'image': 'assets/apple.png'},
-    {'word': 'dog', 'image': 'assets/dog.png'},
-    {'word': 'cat', 'image': 'assets/cat.png'},
-    {'word': 'ball', 'image': 'assets/apple.png'},
-    {'word': 'car', 'image': 'assets/dog.png'},
-    {'word': 'cup', 'image': 'assets/cat.png'},
+    {'word': 'apple', 'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMsDnJRmRWZds5gdgxnLMYb8vuJfPpRUCzA&s'},
+    {'word': 'dog', 'image': 'https://www.nylabone.com/-/media/project/oneweb/nylabone/images/dog101/10-intelligent-dog-breeds/golden-retriever-tongue-out.jpg'},
+    {'word': 'cat', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg'},
+    {'word': 'car', 'image': 'https://imgd.aeplcdn.com/370x208/n/cw/ec/139651/curvv-exterior-right-front-three-quarter.jpeg?isig=0&q=80'},
+    {'word': 'ball', 'image': 'https://cdn.britannica.com/68/195168-050-BBAE019A/football.jpg'},
+    {'word': 'cup', 'image': 'https://www.forlifedesignusa.com/cdn/shop/products/550-CAR.jpg?v=1581640656'},
+    {'word': 'house', 'image': 'https://www.houseplans.net/uploads/plans/32005/elevations/88909-768.jpg?v=091024132147'},
   ];
   int _currentWordIndex = 0;
   bool _isCorrect = false;
@@ -66,7 +67,7 @@ class SpellWordScreenState extends State<SpellWordScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Image.asset(
+            Image.network(
               _words[_currentWordIndex]['image']!,
               height: 200,
               width: 200,

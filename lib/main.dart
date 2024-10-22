@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kids_learning/screens/home_screen.dart';
+import 'package:kids_learning/screens/splash_screen.dart';
 
 void main() {
   runApp(const KidsLearningApp());
@@ -14,12 +15,12 @@ class KidsLearningApp extends StatelessWidget {
       title: 'Kids Learning App',
        theme: ThemeData(
         primarySwatch: Colors.green,
-        brightness: Brightness.dark, // Enables dark mode
+        brightness: Brightness.dark, 
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.green, // Green-themed app bar
+          backgroundColor: Colors.green, 
         ),
         buttonTheme: const ButtonThemeData(
-          buttonColor: Colors.green, // Green buttons
+          buttonColor: Colors.green, 
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -33,7 +34,7 @@ class KidsLearningApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
